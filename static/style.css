@@ -30,6 +30,10 @@ h2 {
   font-size: 36px;
 }
 
+h3.abt {
+  color: #b3b3b3;
+}
+
 p {
   font-size: 20px;
 }
@@ -223,4 +227,5 @@ main.rent_disp {
   align-items: center;
   justify-content: space-between;
   padding: 30px 50px;
+
 }
