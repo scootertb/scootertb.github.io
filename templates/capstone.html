@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zachary Spangler</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <header class="header">
+        <h1>Zachary Spangler</h1>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/templates/capstone.html">Capstone</a>
+                    <a href="/templates/rental.html">Rental</a>
+                </div>
+            </div>
+            <a href="/templates/education.html">Education</a>
+            <a href="/templates/experience.html">Experience</a>
+            <a href="/templates/skills.html">Skills</a>
+            <a href="/templates/index.html">About</a>
+        </div>
+    </header>
+    <main class="cap">
+        <h2>Project Overview</h2>
+        <p>Link to the <a class="ext" href="https://github.com/scootertb/stp_facebook_ml_capstone" target="_blank">project repository</a> and the <a class="ext" href="/srcs/STP_Final_Writeup_Zach.pdf" target="_blank">Full Write-up</a></p>
+        <p>For this project, we are working alongside the Gernsbacher Lab in order to build machine learning models that will classify Facebook posts from the Society of Teaching Psychology (STP) Page. The lab is employing undergraduate RAs to manually code each post but there are over 15000 posts that have been scraped as of the start of this ML project. The goal in creating these models is to more efficiently label these posts. In order to answer different questions, there are three different prongs of labeling to be done on the dataset:</p>
+        <p>Prong 1: Purpose</p>
+        <ul class="cap_list">
+            <li>Request</li>
+            <ul>
+                <li>Requests materials</li>
+                <li>Requests research</li>
+                <li>Requests collaboration</li>
+                <li>Requests advice</li>
+                <li>Requests commiseration</li>
+                <li>Uncodable request</li>
+            </ul>
+            <li>Share</li>
+            <ul>
+                <li>Shares STP-specific information</li>
+                <li>Shares professional information</li>
+                <li>Shares materials</li>
+                <li>Shares event information</li>
+                <li>Shares research</li>
+                <li>Shares advice</li>
+                <li>Shares personal information</li>
+                <li>Uncodable Share</li>
+            </ul>
+            <li>Uncodable Purpose</li>
+        </ul>
+        <p>Prong 2: Discipline</p>
+        <ul class="cap_list">
+            <li>Yes - Syllabus</li>
+            <li>Yes - Textbook</li>
+            <li>Yes - Job Posting</li>
+            <li>No</li>
+        </ul>
+        <p>Prong 3: Identity</p>
+        <ul class="cap_list">
+            <li>Graduate Student</li>
+            <li>K-12 Teacher</li>
+            <li>Non K-12 Teacher</li>
+            <li>Unspecified Teacher</li>
+            <li>Non-Instructor poster</li>
+            <li>Uncodable Poster</li>
+        </ul>
+        <h2>Workflow</h2>
+        <h3>Level 1 Models - Simple Classifiers</h3>
+        <p>These are simpler models that uses simpler algorithms (glmnet/lasso, random forest, etc.) to create class predictions based on our training data. The reason we are referring to these as simple classifiers is because they are simply taking a bag of words approach that calculates a tf-idf (term frequency / inverse document frequency) metric. So essentially these models are making a predictions solely based on what word (or n-gram) frequencies are most common in a class and using that for predictions.</p>
+        <h3>Level 2 Models - Structured Topics Modeling</h3>
+        <p>While the previous level utilized ngram frequency, Structured Topic Modeling (STM) finds latent topics within a document via co-occurence of tokens. So with this approach, we are letting the model dictate the topics it forms. From here, we can utilize the topic proportions that this model generates in place of the tf-idf metric used in level 1. In order to produce label predictions, we would first consider the best number of topics for K in our STMs, then do cluster analysis, and finally use a KNN supervised model to assess the performance of these models.</p>
+        <h3>Level 3 Models - OpenAI's ChatGPT Backend API (LLM utilization)</h3>
+        <p>In this final level of model's we will be accessing ChatGPT through OpenAI's backend API to run our posts through. This means that we will be taking advantage of a Large Language model which we expect to have the greatest level of accuracy at the cost of control over model specifications as well as interpretability. While it would be possible to ask the model to provide reasoning for the answer it provides, there are a few problems that come up with doing this. For one, it would only really help with error tuning which we are not tackling in this project. Also, it would ramp up costs of using the API since we would be returning a lot more tokens in comparison to our current setup of getting our singular answer.</p>
+        <p>The most important aspect of this level that will be reiterated upon is prompt engineering and API integration into a python script. The latter portion here is quite straight forward to accomplish but ensures that we can run ALL of our posts and receive some form of coding for each one. The former takes some trial and error given that we want to be both succinct in the instructions given to the LLM but also provide enough context for it to make an accurate prediction.</p>
+        <h2>Presentation of Results</h2>
+    </main>
+    <iframe class="ppt" src="https://docs.google.com/presentation/d/e/2PACX-1vRq1O7s9HUc3UIKaQAHaS9_SmX1pdQb9g605AIAt_FW4XSyExn9H_B8x5mF2AmcIQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

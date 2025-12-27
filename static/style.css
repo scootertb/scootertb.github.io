@@ -1,0 +1,226 @@
+html {background-color: #252530;}
+/* Container for header: includes title and navbar */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Main container on index/about page */
+main.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 150px;
+  color: #b3b3b3
+}
+
+/* Header (Page title) properties */
+h1 {
+    color: white;
+    font-family: Georgia;
+}
+
+h2 {
+  color:#b3b3b3;
+  text-align: center;
+  font-size: 36px;
+}
+
+p {
+  font-size: 20px;
+}
+
+img.avatar {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: right;
+    float: right;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #b3b3b3;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #007acc;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.skills {
+  color: #b3b3b3;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul.skill_list {
+  display: inline-block;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 50;
+}
+
+
+h3.edu_loc {
+  font-size: 34px;
+  color:#b3b3b3;
+  margin-left: 100px;
+
+}
+
+h3.edu{
+  font-size: 20px
+}
+
+main.edu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 200px;
+  color: #b3b3b3
+}
+
+
+main.exp {
+  color:#b3b3b3;
+  border-style: solid;
+  border-color: #007acc;
+}
+
+.comp_det {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3.comp {
+  margin-left: 250px;
+  font-style: bold;
+}
+
+h3.loc {
+  margin-right: 250px;
+}
+
+h3.role {
+  margin-left: 250px;
+  font-style: italic;
+}
+
+h3.date {
+  margin-right: 250px;
+}
+
+ul.job_list {
+  text-align: left;
+  margin-left: 250px;
+  font-size: 20px;
+  margin-right: 250px
+}
+
+main.cap {
+  color: #b3b3b3;
+  margin-left: 100px;
+  margin-right: 100px
+}
+
+
+a.ext:link {
+  color:#007acc
+}
+
+a.ext:visited {
+  color: #9b51cc
+}
+
+ul.cap_list {
+  line-height: 1.5;
+}
+
+iframe.ppt {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  border-style: none;
+}
+main.rent {
+  color: #b3b3b3;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 20px;
+}
+
+main.rent_disp {
+  color: #b3b3b3;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+}

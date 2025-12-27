@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zachary Spangler</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <header class="header">
+        <h1>Zachary Spangler</h1>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/templates/capstone.html">Capstone</a>
+                    <a href="/templates/rental.html">Rental</a>
+                </div>
+            </div>
+            <a href="/templates/education.html">Education</a>
+            <a href="/templates/experience.html">Experience</a>
+            <a href="/templates/skills.html">Skills</a>
+            <a href="/templates/index.html">About</a>
+        </div>
+    </header>
+    <main class="rent">
+        <h2>Project Overview</h2>
+        <p>Link to the <a class="ext" href="https://github.com/scootertb/stp_facebook_ml_capstone" target="_blank">project repository</a></p>
+        <p>This is a project that incorporates a Python Flask app with HTML rendering and a SQL database to create a dashboard for keeping track of rental properties. This dashboard is capable of data submission, data viewing, and report generation. The reports that are generated gives the property owner insight into total income, total expenses, tenant balance, and an item-by-item breakdown on a per unit basis. </p>
+        <p>Certain aspects of this project that I want to highlight that made me deepen my understanding of working with SQL as well as Pandas, is creating a deletion route and keeping a running total of the tenant's balance. Given that the client wanted the ability to delete rows of data they inserted, I needed to first include a way to view the database and then incorporate a loop between the flask app and the database to handle deletions. This goes hand-in-hand with the tenant balance since deleting rows would affect this running tally that is being kept across records. So I spent a long time figuring out the logic of handling deletions and a running cumulative variable. </p>
+        <p>Here are some views of the data submission and reports generated:</p>
+    </main>
+    <main class="rent_disp">
+        <img src="/srcs/data_submission.PNG">
+         <img src="/srcs/data_report.PNG">
+    </main>
+    
